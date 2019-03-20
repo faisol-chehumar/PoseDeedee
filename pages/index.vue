@@ -1,68 +1,67 @@
 <template>
   <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        PoseDeedee
-      </h1>
-      <h2 class="subtitle">
-        My delightful Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+    <a-layout>
+      <a-layout-header class="top-nav">
+        <a-row>
+          <a-col :span="6">
+            <div class="logo">
+              <span class="-img"></span>
+              <span class="-title">POSE-D</span>
+            </div>
+          </a-col>
+          <a-col :span="3" :offset="9">แอพเราทำงานอย่างไร</a-col>
+          <a-col :span="3">เกี่ยวกับเรา</a-col>
+          <a-col :span="3">รับข่าวสาร</a-col>
+        </a-row>
+      </a-layout-header>
+      <a-layout-content>Content</a-layout-content>
+      <a-layout-footer class="footer">
+        Made with
+        <a-icon type="heart" theme="twoTone" two-tone-color="#eb2f96" />
+        by Pose-D team.
+      </a-layout-footer>
+    </a-layout>
   </section>
 </template>
 
-<script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
-</script>
-
 <style>
-.container {
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo .-img {
+  background-image: url('~assets/logo.png');
+  background-size: cover;
+  width: 4rem;
+  height: 4rem;
+  display: inline-block;
+}
+
+.logo .-title {
+  margin-left: 1rem;
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: 'Oswald';
+}
+
+.top-nav.ant-layout-header {
+  background: #eee;
+  padding: 0.5rem 0;
+  height: 5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.container .ant-layout {
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   text-align: center;
+  background: transparent;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.footer {
+  border-top: 1px solid #ddd;
 }
 </style>
