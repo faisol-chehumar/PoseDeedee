@@ -2,11 +2,11 @@
   <section class="container">
     <a-layout>
       <a-layout-header class="top-nav">
-        <a-row>
-          <a-col :span="6">
+        <a-row type="flex" justify="center">
+          <a-col :span="4">
             <div class="logo">
               <span class="-img"></span>
-              <span class="-title">POSE-D</span>
+              <span class="-title">PERFECT SNAP</span>
             </div>
           </a-col>
           <a-col :span="3" :offset="9">แอพเราทำงานอย่างไร</a-col>
@@ -40,7 +40,7 @@
 
 .logo .-title {
   margin-left: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 800;
   font-family: 'Oswald';
 }
